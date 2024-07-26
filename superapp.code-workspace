@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "base_app"
+    },
+    {
+      "path": "app_commons"
+    },
+    {
+      "path": "app_core"
+    },
+    {
+      "path": "app_micro_login"
+    }
+  ],
+  "settings": {
+    "dart.flutterSdkPath": "~/flutternew"
+  }
+}

@@ -1,0 +1,1 @@
+enum ApiName { auth, portal }
