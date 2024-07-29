@@ -1,5 +1,6 @@
 // library app_micro_login;
 
+import 'package:app_commons/app_commons.dart';
 import 'package:app_core/app_core.dart';
 import 'package:app_micro_login/core/core.dart';
 import 'package:app_micro_login/core/dependencies.dart';
@@ -23,9 +24,6 @@ class MicroLogin extends StatelessWidget implements MicroApp {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: microAppName,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       initialRoute: MicroLoginRoutes.login.value,
     );
   }
