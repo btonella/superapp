@@ -1,0 +1,31 @@
+{
+    "flutter": {
+      "platforms": {
+        "android": {
+          "default": {
+            "projectId": "superapp-btech",
+            "appId": "1:265766790566:android:0f908c0f934b2ac95a5b67",
+            "fileOutput": "android/app/google-services.json"
+          }
+        },
+        "ios": {
+          "default": {
+            "projectId": "superapp-btech",
+            "appId": "1:265766790566:ios:0c65ed00e48ce92d5a5b67",
+            "uploadDebugSymbols": false,
+            "fileOutput": "ios/Runner/GoogleService-Info.plist"
+          }
+        },
+        "dart": {
+          "lib/firebase_options.dart": {
+            "projectId": "superapp-btech",
+            "configurations": {
+              "android": "1:265766790566:android:0f908c0f934b2ac95a5b67",
+              "ios": "1:265766790566:ios:0c65ed00e48ce92d5a5b67",
+              "web": "1:265766790566:web:280c66855af9a8e25a5b67"
+            }
+          }
+        }
+      }
+    }
+}

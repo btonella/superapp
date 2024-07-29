@@ -56,8 +56,31 @@ class FlavorServiceImpl implements FlavorService {
 
   @override
   FirebaseOptions getFirebaseConfig() {
-    // TODO: implement getFirebaseConfig
-    throw UnimplementedError();
+    Environment enviroment = getEnvironment();
+    Flavor flavor = getFlavor();
+    logger.info('getFirebaseConfig: enviroment $enviroment, flavor $flavor');
+    switch (flavor) {
+      case Flavor.base:
+        switch (enviroment) {
+          case Environment.dev:
+            return DefaultFirebaseOptionsDev.currentPlatform;
+          case Environment.hml:
+            return DefaultFirebaseOptionsHml.currentPlatform;
+          default:
+            return DefaultFirebaseOptions.currentPlatform;
+        }
+      case Flavor.partner:
+        switch (enviroment) {
+          case Environment.dev:
+            return DefaultFirebaseOptionsPartnerDev.currentPlatform;
+          case Environment.hml:
+            return DefaultFirebaseOptionsPartnerHml.currentPlatform;
+          default:
+            return DefaultFirebaseOptionsPartner.currentPlatform;
+        }
+      default:
+        return DefaultFirebaseOptions.currentPlatform;
+    }
   }
 
   @override

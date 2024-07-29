@@ -80,44 +80,6 @@
           "other_platform_oauth_client": []
         }
       }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:265766790566:android:cc2d748eb2b6c4dd5a5b67",
-        "android_client_info": {
-          "package_name": "com.btech.superapp.baseapp.partner.dev"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD4As7wuP6DBii9KhJ9xOBNODM__yWctiQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:265766790566:android:97a559d4c86dcdff5a5b67",
-        "android_client_info": {
-          "package_name": "com.btech.superapp.baseapp.partner.hml"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD4As7wuP6DBii9KhJ9xOBNODM__yWctiQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
     }
   ],
   "configuration_version": "1"

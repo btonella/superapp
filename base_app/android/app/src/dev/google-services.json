@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "265766790566",
+    "project_id": "superapp-btech",
+    "storage_bucket": "superapp-btech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265766790566:android:0f908c0f934b2ac95a5b67",
+        "android_client_info": {
+          "package_name": "com.btech.superapp.baseapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4As7wuP6DBii9KhJ9xOBNODM__yWctiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265766790566:android:199c43f3c30953905a5b67",
+        "android_client_info": {
+          "package_name": "com.btech.superapp.baseapp.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4As7wuP6DBii9KhJ9xOBNODM__yWctiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

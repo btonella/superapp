@@ -11,10 +11,11 @@ class AppDependencies {
     await deviceInfosService.init();
 
     // flavor
-    I.registerDependency<FlavorService>(FlavorServiceImpl());
+    FlavorService flavorService = FlavorServiceImpl();
+    I.registerDependency<FlavorService>(flavorService);
 
     // firebase
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(options: flavorService.getFirebaseConfig());
 
     // analytics
     I.registerDependency<AnalyticsService>(AnalyticsServiceImpl());
