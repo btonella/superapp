@@ -5,7 +5,7 @@ version: 0.0.1
 homepage:
 
 environment:
-  sdk: ">=3.3.1 <4.0.0"
+  sdk: ">=3.4.4 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -14,6 +14,9 @@ dependencies:
 
   app_core:
     path: "../app_core"
+    # git: https://github.com/
+  app_commons:
+    path: "../app_commons"
     # git: https://github.com/
 
 dev_dependencies:

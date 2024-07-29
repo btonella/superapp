@@ -1,3 +1,4 @@
+import 'package:app_commons/app_commons.dart';
 import 'package:app_core/app_core.dart';
 import 'package:app_micro_login/app_micro_login.dart';
 import 'package:base_app/core/routes.dart';
@@ -5,8 +6,8 @@ import 'package:base_app/modules/modules.dart';
 import 'package:flutter/material.dart';
 
 class AppBaseMain extends BaseApp with MainApp {
-  final ThemeData themeData;
-  AppBaseMain({required this.themeData, super.key});
+  // final ThemeData themeData;
+  AppBaseMain({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class AppBaseMain extends BaseApp with MainApp {
       ]),
       builder: (context, snapshot) => MaterialApp(
         title: 'SuperApp',
-        theme: themeData,
+        theme: AppTheme.getThemeData(),
         navigatorKey: AppNavigator.navigatorKey,
         onGenerateRoute: super.generateRoute,
         initialRoute: BaseRoutes.splash.value,

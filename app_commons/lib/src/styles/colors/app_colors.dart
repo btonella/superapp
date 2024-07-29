@@ -2,7 +2,7 @@ import 'dart:ui';
 
 class AppColors {
   Color get primary => const Color(0xFF51C3C7);
-  Color get secondary => const Color(0xFF414594);
+  Color get secondary => const Color(0xFF53565A);
   Color get complementary => const Color(0xFFF7921E);
 
   Color get warning => const Color(0xFFFFBE0B);
