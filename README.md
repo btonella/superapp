@@ -23,6 +23,17 @@ To use the commits template run:
 git config commit.template .gitmessage.conf
 ```
 
+### How to run the project
+
+- Create one file on the `/superapp/base_app/android` with the name "key.properties", with the content:
+
+  ```
+  storePassword=
+  keyPassword=
+  keyAlias=key
+  storeFile=../private_key.pepk
+  ```
+
 ### How to create a new micro app
 
 - Duplicate the "app_micro_login" folder adding it to another repository and updating the name inside of it
