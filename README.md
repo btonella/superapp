@@ -1,6 +1,6 @@
 # SuperApp
 
-[![Generic badge](https://img.shields.io/badge/STATUS-DEVELOPMENT-FBFB5A.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/STATUS-DONE-3BB143.svg)](https://shields.io/)
 
 A new Super App Project Template using Flutter, Multi-Repo and Clean Dart
 
@@ -22,3 +22,17 @@ To use the commits template run:
 ```sh
 git config commit.template .gitmessage.conf
 ```
+
+### How to create a new micro app
+
+- Duplicate the "app_micro_login" folder adding it to another repository and updating the name inside of it
+- Add the new micro app on the `/superapp/base_app/pubspec.yaml` "dependencies" bellow the "app_micro_login"
+- Add the micro app on the "get microApps" on the `/superapp/base_app/lib/core/app_base_main.dart` bellow the `const MicroLogin(),`
+- Done.
+
+### Architecture (Clean Dart):
+
+Documentation: <https://github.com/Flutterando/Clean-Dart/>
+
+![image](https://github.com/Flutterando/Clean-Dart/raw/master/imgs/img1.png)
+![image](https://github.com/Flutterando/Clean-Dart/raw/master/imgs/img2.png)

@@ -16,11 +16,11 @@ dependencies:
   app_core:
     path: "../app_core"
     # git: https://github.com/
-  app_micro_login:
-    path: "../app_micro_login"
-    # git: https://github.com/
   app_commons:
     path: "../app_commons"
+    # git: https://github.com/
+  app_micro_login:
+    path: "../app_micro_login"
     # git: https://github.com/
 
 dev_dependencies:
