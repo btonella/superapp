@@ -77,36 +77,36 @@ android {
         prod {
             dimension "app"
             resValue "string", "app_name", "SuperApp"
-            applicationId "com.btech.superapp.baseapp"
+            applicationIdSuffix ""
         }
         dev {
             dimension "app"
             resValue "string", "app_name", "SuperApp dev"
             versionNameSuffix "-dev"
-            applicationId "com.btech.superapp.baseapp.dev"
+            applicationIdSuffix ".dev"
         }
         hml {
             dimension "app"
             resValue "string", "app_name", "SuperApp hml"
             versionNameSuffix "-hml"
-            applicationId "com.btech.superapp.baseapp.hml"
+            applicationIdSuffix ".hml"
         }
         partner {
             dimension "app"
             resValue "string", "app_name", "Partner"
-            applicationId "com.btech.superapp.baseapp.partner"
+            applicationIdSuffix ".partner"
         }
         partner_dev {
             dimension "app"
             resValue "string", "app_name", "Partner dev"
             versionNameSuffix "-dev"
-            applicationId "com.btech.superapp.baseapp.partner.dev"
+            applicationIdSuffix ".partner.dev"
         }
         partner_hml {
             dimension "app"
             resValue "string", "app_name", "Partner hml"
             versionNameSuffix "-hml"
-            applicationId "com.btech.superapp.baseapp.partner.hml"
+            applicationIdSuffix ".partner.hml"
         }
     }
 }

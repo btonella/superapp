@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1540"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "environment=&quot;partner&quot;&#10;&#10;# Regex to extract the scheme name from the Build Configuration&#10;# We have named our Build Configurations as Debug-dev, Debug-prod etc.&#10;# Here, dev and prod are the scheme names. This kind of naming is required by Flutter for flavors to work.&#10;# We are using the $CONFIGURATION variable available in the XCode build environment to extract &#10;# the environment (or flavor)&#10;# For eg.&#10;# If CONFIGURATION=&quot;Debug-prod&quot;, then environment will get set to &quot;prod&quot;.&#10;if [[ $CONFIGURATION =~ -([^-]*)$ ]]; then&#10;environment=${BASH_REMATCH[1]}&#10;fi&#10;&#10;echo $environment&#10;&#10;# Name and path of the resource we&apos;re copying&#10;GOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist&#10;GOOGLESERVICE_INFO_FILE=${PROJECT_DIR}/config/${environment}/${GOOGLESERVICE_INFO_PLIST}&#10;&#10;# Make sure GoogleService-Info.plist exists&#10;echo &quot;Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_FILE}&quot;&#10;if [ ! -f $GOOGLESERVICE_INFO_FILE ]&#10;then&#10;echo &quot;No GoogleService-Info.plist found. Please ensure it&apos;s in the proper directory.&quot;&#10;exit 1&#10;fi&#10;&#10;# Get a reference to the destination location for the GoogleService-Info.plist&#10;# This is the default location where Firebase init code expects to find GoogleServices-Info.plist file&#10;PLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app&#10;echo &quot;Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}&quot;&#10;&#10;# Copy over the prod GoogleService-Info.plist for Release builds&#10;cp &quot;${GOOGLESERVICE_INFO_FILE}&quot; &quot;${PLIST_DESTINATION}&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+                     BuildableName = "Runner.app"
+                     BlueprintName = "Runner"
+                     ReferencedContainer = "container:Runner.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+               BuildableName = "Runner.app"
+               BlueprintName = "Runner"
+               ReferencedContainer = "container:Runner.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug-partner"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug-partner"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "environment=&quot;partner&quot;&#10;&#10;# Regex to extract the scheme name from the Build Configuration&#10;# We have named our Build Configurations as Debug-dev, Debug-prod etc.&#10;# Here, dev and prod are the scheme names. This kind of naming is required by Flutter for flavors to work.&#10;# We are using the $CONFIGURATION variable available in the XCode build environment to extract &#10;# the environment (or flavor)&#10;# For eg.&#10;# If CONFIGURATION=&quot;Debug-prod&quot;, then environment will get set to &quot;prod&quot;.&#10;if [[ $CONFIGURATION =~ -([^-]*)$ ]]; then&#10;environment=${BASH_REMATCH[1]}&#10;fi&#10;&#10;echo $environment&#10;&#10;# Name and path of the resource we&apos;re copying&#10;GOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist&#10;GOOGLESERVICE_INFO_FILE=${PROJECT_DIR}/config/${environment}/${GOOGLESERVICE_INFO_PLIST}&#10;&#10;# Make sure GoogleService-Info.plist exists&#10;echo &quot;Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_FILE}&quot;&#10;if [ ! -f $GOOGLESERVICE_INFO_FILE ]&#10;then&#10;echo &quot;No GoogleService-Info.plist found. Please ensure it&apos;s in the proper directory.&quot;&#10;exit 1&#10;fi&#10;&#10;# Get a reference to the destination location for the GoogleService-Info.plist&#10;# This is the default location where Firebase init code expects to find GoogleServices-Info.plist file&#10;PLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app&#10;echo &quot;Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}&quot;&#10;&#10;# Copy over the prod GoogleService-Info.plist for Release builds&#10;cp &quot;${GOOGLESERVICE_INFO_FILE}&quot; &quot;${PLIST_DESTINATION}&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+                     BuildableName = "Runner.app"
+                     BlueprintName = "Runner"
+                     ReferencedContainer = "container:Runner.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+            BuildableName = "Runner.app"
+            BlueprintName = "Runner"
+            ReferencedContainer = "container:Runner.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release-partner"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "environment=&quot;partner&quot;&#10;&#10;# Regex to extract the scheme name from the Build Configuration&#10;# We have named our Build Configurations as Debug-dev, Debug-prod etc.&#10;# Here, dev and prod are the scheme names. This kind of naming is required by Flutter for flavors to work.&#10;# We are using the $CONFIGURATION variable available in the XCode build environment to extract &#10;# the environment (or flavor)&#10;# For eg.&#10;# If CONFIGURATION=&quot;Debug-prod&quot;, then environment will get set to &quot;prod&quot;.&#10;if [[ $CONFIGURATION =~ -([^-]*)$ ]]; then&#10;environment=${BASH_REMATCH[1]}&#10;fi&#10;&#10;echo $environment&#10;&#10;# Name and path of the resource we&apos;re copying&#10;GOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist&#10;GOOGLESERVICE_INFO_FILE=${PROJECT_DIR}/config/${environment}/${GOOGLESERVICE_INFO_PLIST}&#10;&#10;# Make sure GoogleService-Info.plist exists&#10;echo &quot;Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_FILE}&quot;&#10;if [ ! -f $GOOGLESERVICE_INFO_FILE ]&#10;then&#10;echo &quot;No GoogleService-Info.plist found. Please ensure it&apos;s in the proper directory.&quot;&#10;exit 1&#10;fi&#10;&#10;# Get a reference to the destination location for the GoogleService-Info.plist&#10;# This is the default location where Firebase init code expects to find GoogleServices-Info.plist file&#10;PLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app&#10;echo &quot;Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}&quot;&#10;&#10;# Copy over the prod GoogleService-Info.plist for Release builds&#10;cp &quot;${GOOGLESERVICE_INFO_FILE}&quot; &quot;${PLIST_DESTINATION}&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+                     BuildableName = "Runner.app"
+                     BlueprintName = "Runner"
+                     ReferencedContainer = "container:Runner.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+            BuildableName = "Runner.app"
+            BlueprintName = "Runner"
+            ReferencedContainer = "container:Runner.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug-partner">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release-partner"
+      revealArchiveInOrganizer = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "environment=&quot;partner&quot;&#10;&#10;# Regex to extract the scheme name from the Build Configuration&#10;# We have named our Build Configurations as Debug-dev, Debug-prod etc.&#10;# Here, dev and prod are the scheme names. This kind of naming is required by Flutter for flavors to work.&#10;# We are using the $CONFIGURATION variable available in the XCode build environment to extract &#10;# the environment (or flavor)&#10;# For eg.&#10;# If CONFIGURATION=&quot;Debug-prod&quot;, then environment will get set to &quot;prod&quot;.&#10;if [[ $CONFIGURATION =~ -([^-]*)$ ]]; then&#10;environment=${BASH_REMATCH[1]}&#10;fi&#10;&#10;echo $environment&#10;&#10;# Name and path of the resource we&apos;re copying&#10;GOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist&#10;GOOGLESERVICE_INFO_FILE=${PROJECT_DIR}/config/${environment}/${GOOGLESERVICE_INFO_PLIST}&#10;&#10;# Make sure GoogleService-Info.plist exists&#10;echo &quot;Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_FILE}&quot;&#10;if [ ! -f $GOOGLESERVICE_INFO_FILE ]&#10;then&#10;echo &quot;No GoogleService-Info.plist found. Please ensure it&apos;s in the proper directory.&quot;&#10;exit 1&#10;fi&#10;&#10;# Get a reference to the destination location for the GoogleService-Info.plist&#10;# This is the default location where Firebase init code expects to find GoogleServices-Info.plist file&#10;PLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app&#10;echo &quot;Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}&quot;&#10;&#10;# Copy over the prod GoogleService-Info.plist for Release builds&#10;cp &quot;${GOOGLESERVICE_INFO_FILE}&quot; &quot;${PLIST_DESTINATION}&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+                     BuildableName = "Runner.app"
+                     BlueprintName = "Runner"
+                     ReferencedContainer = "container:Runner.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+   </ArchiveAction>
+</Scheme>
