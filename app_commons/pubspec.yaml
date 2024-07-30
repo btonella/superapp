@@ -24,13 +24,13 @@ flutter:
   assets:
     - assets/
     - assets/fonts/
-    - assets/icons/
-    - assets/images/
+    # - assets/icons/
+    # - assets/images/
 
   fonts:
     - family: Montserrat
       fonts:
-        - asset: assets/fonts//Montserrat-Thin.ttf
+        - asset: assets/fonts/Montserrat-Thin.ttf
           weight: 100
         - asset: assets/fonts/Montserrat-ThinItalic.ttf
           weight: 100
